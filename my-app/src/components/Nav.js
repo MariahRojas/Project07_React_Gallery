@@ -1,18 +1,30 @@
-import React from 'react';
-import { Route, NavLink, Redirect } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const Nav = () => {
+const Nav = (props) => {
     return (
-        <div>
-            <nav className="main-nav">
+        <ul className="main-nav">
+            <nav>
                 <ul>
-                    <li><a href='https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=edb40053c23c1abd33772c68909f9e55&tags=cupcakes&per_page=24&format=json&nojsoncallback=1'>Cupcakes</a></li>
-                    <li><a href='#'>Dogs</a></li>
-                    <li><a href='#'>Computers</a></li>
+                <li><NavLink exact to="/" onClick={() => {
+                    props.performSearch()
+                }}>Home</NavLink></li>
+
+                <li><NavLink to="/cupcakes" onClick={() => {
+                    props.performSearch("cupcakes")
+                }}>Cupcakes</NavLink></li>
+
+                <li><NavLink to="/macaroons" onClick={() => {
+                    props.performSearch("macaroons")
+                }} >Macaroons</NavLink></li>
+                
+                <li><NavLink to="/icecream" onClick={() => {
+                    props.performSearch("icecream")
+                }}>Icecream</NavLink></li>
                 </ul>
             </nav>
-        </div>
+        </ul>    
     )
 }
-
-export default Nav;
+        
+export default Nav
