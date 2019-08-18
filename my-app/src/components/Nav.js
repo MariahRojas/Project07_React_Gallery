@@ -8,19 +8,19 @@ const Nav = (props) => {
                 <ul>
                 <li><NavLink exact to="/" onClick={() => {
                     props.performSearch()
-                }}>Home</NavLink></li>
+                }}>Macaroons</NavLink></li>
 
                 <li><NavLink to="/cupcakes" onClick={() => {
                     props.performSearch("cupcakes")
                 }}>Cupcakes</NavLink></li>
 
-                <li><NavLink to="/macaroons" onClick={() => {
-                    props.performSearch("macaroons")
-                }} >Macaroons</NavLink></li>
+                <li><NavLink to="/latte" onClick={() => {
+                    props.performSearch("latte")
+                }} >Latte</NavLink></li>
                 
-                <li><NavLink to="/icecream" onClick={() => {
-                    props.performSearch("icecream")
-                }}>Icecream</NavLink></li>
+                <li><NavLink to="/espresso" onClick={() => {
+                    props.performSearch("espresso")
+                }}>Espresso</NavLink></li>
                 </ul>
             </nav>
         </ul>    

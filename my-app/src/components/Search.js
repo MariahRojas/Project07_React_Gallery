@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
+
 class Search extends Component {
 
     onSearchChange = (e) => {
@@ -33,4 +34,3 @@ class Search extends Component {
 }
 
 export default withRouter(Search);
-//TODO: route nav links
