@@ -54,7 +54,7 @@ export default class App extends Component {
             <Route path="/:name" />
             <Route path="/ImageList/:type" component={ImageList} />
             <Route path={`match.search/:id`} component={Search} />
-            <Route path="/search" component={Search} />
+            <Route exact path="/search" component={Search} />
             <NoResults />
           </Switch>
         </BrowserRouter>
