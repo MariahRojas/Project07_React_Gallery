@@ -6,12 +6,12 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './index.css';
 import Search from './components/Search';
 import Nav from './components/Nav';
-import NoResults from './components/NotFound';
 import axios from 'axios';
 import apiKey from './config';
 import ImageList from './components/ImageList';
 import Home from './components/Header';
 import loading from './loading.svg';
+
 
 
 export default class App extends Component {
@@ -54,17 +54,18 @@ export default class App extends Component {
 
           <Home />                                      {/* renders header */}
           <Search onSearch={this.performSearch} />      {/* renders Search component */}
-          <Nav performSearch={this.performSearch} />    {/* renders nav links */}
+          <Nav performSearch={this.performSearch} />  {/* renders nav links */}
 
           {/* https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/Switch.md*/}
           {/* Switch Renders the first child <Route> that matches the location. */}
-          <Switch>
-            <Route exact path="/" />
-            <Route path="/:name" />
-            <Route path="/ImageList/:type" component={ImageList} />
-            <Route path={`match.search/:id`} component={Search} />
-            <Route exact path="/search" component={Search} />
-            <NoResults />                               {/* No Results picture gets rendered */}
+          <Switch>            
+            <Route exact path="/" />            
+            <Route path="/:name" />            
+            {/* <Route path="/ImageList/:type" component={ImageList} /> */}            
+            <Route path={`match.search/:id`} component={Search} />            
+            {/* <Route path="/search" component={Search} />  */}            
+            {/* <NoResults />     */}                           {/* No Results picture gets rendered */}
+            
           </Switch>
 
         </BrowserRouter>

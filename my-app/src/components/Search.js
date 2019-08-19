@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-
+//import NoResults from NotFound;
 
 class Search extends Component {
 
@@ -8,12 +8,16 @@ class Search extends Component {
         this.setState({ searchText: e.target.value });
     }
 
-    handleSubmit = e => {
-        e.preventDefault()
-        this.props.onSearch(this.query.value)
-        this.props.history.push(`/search/${this.state.searchText}`);
-        e.currentTarget.reset();
+
+    handleSubmit = e => {              
+        if(this.state.searchText != null){ 
+            e.preventDefault()
+            this.props.onSearch(this.query.value)       
+            this.props.history.push(`/search/${this.state.searchText}`);
+            e.currentTarget.reset();
+        } 
     }
+
     
     render() {
         return (
