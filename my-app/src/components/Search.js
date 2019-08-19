@@ -14,6 +14,7 @@ class Search extends Component {
         this.props.history.push(`/search/${this.state.searchText}`);
         e.currentTarget.reset();
     }
+    
     render() {
         return (
             <form className="search-form button" onSubmit={this.handleSubmit}>

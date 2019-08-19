@@ -1,5 +1,6 @@
 import React from 'react';
 
+/* Header */
 const Home = (props) => {
     
     return (

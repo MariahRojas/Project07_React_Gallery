@@ -6,7 +6,7 @@ const Nav = (props) => {
         <ul className="main-nav">
             <nav>
                 <ul>
-                <li><NavLink exact to="/" onClick={() => {
+                <li><NavLink exact to="/macaroons" onClick={() => {
                     props.performSearch()
                 }}>Macaroons</NavLink></li>
 

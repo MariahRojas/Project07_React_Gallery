@@ -1,5 +1,6 @@
 import React from 'react'
 
+/* displays Results not found and an image */
 const NoResults = () => (
     <div >
         <p>Results Not Found</p>
