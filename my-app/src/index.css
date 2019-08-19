@@ -7,8 +7,8 @@ body {
 }
 
 h1, .h1 {
-  font-size: 55px;
-  text-shadow: 3px 0px 13px #55dbbe;
+  font-size: 70px;
+  text-shadow: -2px 2px 17px #55dbbe;
   color: aliceblue;
   margin-bottom: 30px;
 }
@@ -44,14 +44,15 @@ a {
 }
 
 input {
-  font-size: 1em;
+  font-size: 2em;
   width: 100%;
   background-color: #edeff0;
-  padding: 10px 15px;
+  padding: 2px 15px;
   border: 3px solid #d7dbdf;
   border-right: none;
   border-radius: 0.35em 0 0 0.35em;
   outline: none;
+  color: rgb(97, 96, 96);
 }
 
 .main-nav li {
@@ -69,7 +70,8 @@ input {
 }
 
 .main-nav .active,
-.main-nav a:hover,
+
+.main-nav a:hover{ cursor: wait; }
 .search-form button:hover {
   background-color: #55dbbe;
 }
