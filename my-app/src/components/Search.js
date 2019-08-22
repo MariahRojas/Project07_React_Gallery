@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-//import NoResults from NotFound;
 
 class Search extends Component {
-
     onSearchChange = (e) => {
         this.setState({ searchText: e.target.value });
     }
