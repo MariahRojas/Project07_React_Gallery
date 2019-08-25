@@ -13,7 +13,6 @@ import Home from './components/Header';
 import loading from './loading.svg';
 
 
-
 export default class App extends Component {
   constructor() {
     super();          /* calls the constructor of the parent App and access functions on this object's parent class. */
